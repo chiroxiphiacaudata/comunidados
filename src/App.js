@@ -49,8 +49,7 @@ const App = () => {
       <TileLayer
         url="https://www.alessandromusetta.com/geo/tiles/tingua/tiles/{z}/{x}/{y}.png" />
 
-<LayersControl position="topleft" >
-<LayersControl.Overlay name="Marker with popup">
+        <LayersControl.Overlay name="Marker with popup">
           {recreativojs.features.map((feature, index) => {
             return (
               <Marker
@@ -61,7 +60,21 @@ const App = () => {
             );
           })}
         </LayersControl.Overlay>
-</LayersControl>
+        <LayersControl.Overlay name="Marker with popup">
+        {espjs.features.map((feature, index) => {
+            return (
+              <Marker
+                key={index}
+                position={L.latLng(feature.geometry.coordinates.reverse())}
+                icon={iconspirit} >
+                 <Popup>
+                    <p>{feature.properties.name}</p> 
+                  </Popup>
+              </Marker>
+            );
+          })}
+        </LayersControl.Overlay>
+        
 
 
       <LayerControl position="topright" >
