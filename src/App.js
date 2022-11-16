@@ -49,6 +49,20 @@ const App = () => {
       <TileLayer
         url="https://www.alessandromusetta.com/geo/tiles/tingua/tiles/{z}/{x}/{y}.png" />
 
+<LayersControl position="topleft" >
+<LayersControl.Overlay name="Marker with popup">
+          {recreativojs.features.map((feature, index) => {
+            return (
+              <Marker
+                key={index}
+                position={L.latLng(feature.geometry.coordinates.reverse())}
+                icon={iconricre}>
+              </Marker>
+            );
+          })}
+        </LayersControl.Overlay>
+</LayersControl>
+
 
       <LayerControl position="topright" >
 

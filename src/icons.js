@@ -1,4 +1,5 @@
 import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 import abacaxi from './icons/abacaxi.svg';
 import abobora from './icons/abobora.svg';
 import acerola from './icons/acerola.svg';
