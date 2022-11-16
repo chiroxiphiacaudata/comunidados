@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "cana",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "type": "cana" }, "geometry": { "type": "Point", "coordinates": [ -43.439125549739337, -22.640666428467206 ] } },
+{ "type": "Feature", "properties": { "type": "cana" }, "geometry": { "type": "Point", "coordinates": [ -43.393115680836686, -22.658798832552861 ] } }
+]
+}

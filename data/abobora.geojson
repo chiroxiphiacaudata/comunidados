@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "abobora",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "type": "abobora" }, "geometry": { "type": "Point", "coordinates": [ -43.389291738615697, -22.646755048720074 ] } },
+{ "type": "Feature", "properties": { "type": "abobora" }, "geometry": { "type": "Point", "coordinates": [ -43.389079297381187, -22.658847857453132 ] } }
+]
+}

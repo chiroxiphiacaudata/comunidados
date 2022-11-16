@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/comunidados/static/css/main.6ce490f8.css",
+    "main.js": "/comunidados/static/js/main.d2841163.js",
+    "static/js/787.0a06d626.chunk.js": "/comunidados/static/js/787.0a06d626.chunk.js",
+    "static/media/milho.svg": "/comunidados/static/media/milho.bb1b6d8bf4b7554d429be96971fb4e12.svg",
+    "static/media/goiaba.svg": "/comunidados/static/media/goiaba.b36f58b2285aeca31e0c231671a55dff.svg",
+    "static/media/aipim.svg": "/comunidados/static/media/aipim.af6710c0410a40594e004809abf6d809.svg",
+    "static/media/ortalicas.svg": "/comunidados/static/media/ortalicas.297397695476b3411aab12ba59a1805b.svg",
+    "static/media/fejiao.svg": "/comunidados/static/media/fejiao.dbd71fece4a101f01f41973c724487bd.svg",
+    "static/media/lixo.svg": "/comunidados/static/media/lixo.29704e9bb7db2c2aa625ffff4b185484.svg",
+    "static/media/logo.svg": "/comunidados/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/abobora.svg": "/comunidados/static/media/abobora.b71092806b03615627c1bc0e16425f08.svg",
+    "static/media/cana.svg": "/comunidados/static/media/cana.805d1874510922ccb22e2ec68c12ba3b.svg",
+    "static/media/spirit.svg": "/comunidados/static/media/spirit.0f8340777be53179128d04f7d5b6fc62.svg",
+    "static/media/abacaxi.svg": "/comunidados/static/media/abacaxi.ba0305b27521e8f594a9580d2dcccc86.svg",
+    "static/media/acerola.svg": "/comunidados/static/media/acerola.2c51cc8880dc4f7fd0ec6e77da9052f3.svg",
+    "static/media/quiabo.svg": "/comunidados/static/media/quiabo.7fbca4d93d7889b607262cbe32ebacf8.svg",
+    "static/media/esgoto.svg": "/comunidados/static/media/esgoto.10ca3d22dc5f30d7cdd707ccc532d371.svg",
+    "static/media/ricreativo.svg": "/comunidados/static/media/ricreativo.2a4b04b1651fa1fa4c88c9244e5fc812.svg",
+    "static/media/manga.svg": "/comunidados/static/media/manga.569b5e60c6974e4513d867b26a05da54.svg",
+    "static/media/coco.svg": "/comunidados/static/media/coco.9eecdcf70321a18443a00b87da3063f8.svg",
+    "static/media/misto.svg": "/comunidados/static/media/misto.103f98969eca301c4b4c92333f0a0b0e.svg",
+    "static/media/banana.svg": "/comunidados/static/media/banana.6889b48ecec9d4d22630e199279bb8df.svg",
+    "static/media/intell.svg": "/comunidados/static/media/intell.dd736ef1f8e228db2150f595990ab039.svg",
+    "index.html": "/comunidados/index.html",
+    "main.6ce490f8.css.map": "/comunidados/static/css/main.6ce490f8.css.map",
+    "main.d2841163.js.map": "/comunidados/static/js/main.d2841163.js.map",
+    "787.0a06d626.chunk.js.map": "/comunidados/static/js/787.0a06d626.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ce490f8.css",
+    "static/js/main.d2841163.js"
+  ]
+}

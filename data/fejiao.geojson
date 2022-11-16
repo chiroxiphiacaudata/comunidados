@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "fejiao",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "type": "fejiao" }, "geometry": { "type": "Point", "coordinates": [ -43.4397438082039, -22.639604222294711 ] } },
+{ "type": "Feature", "properties": { "type": "fejiao" }, "geometry": { "type": "Point", "coordinates": [ -43.377907067330938, -22.623108705156906 ] } }
+]
+}
