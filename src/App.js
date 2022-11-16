@@ -50,7 +50,7 @@ const App = () => {
         url="https://www.alessandromusetta.com/geo/tiles/tingua/tiles/{z}/{x}/{y}.png" />
 
 
-      {/* Start call layers */} 
+      {/* Start call layers _______________________________________________________________________________________________________________*/} 
         <LayersControl.Overlay>
           {recreativojs.features.map((feature, index) => {
             return (
@@ -115,6 +115,16 @@ const App = () => {
             })}
         </LayersControl.Overlay>
         <LayersControl.Overlay>
+        {esgotojs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconesgoto} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
         {abacaxijs.features.map((feature, index) => {
             return (
               <Marker
@@ -124,10 +134,127 @@ const App = () => {
             );
           })}
         </LayersControl.Overlay>
-
-
-
-      {/* End call layers */} 
+        <LayersControl.Overlay>
+        {aboborajs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconabobora} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {acerolajs.features.map((feature, index) => {
+            return (
+              <Marker
+                key={index}
+                position={L.latLng(feature.geometry.coordinates.reverse())}
+                icon={iconacerola} />
+            );
+          })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {aipimjs.features.map((feature, index) => {
+            return (
+              <Marker
+                key={index}
+                position={L.latLng(feature.geometry.coordinates.reverse())}
+                icon={iconaipim} />
+            );
+          })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {bananajs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconbanana} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {canajs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconcana} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {cocojs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconcoco} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {fejiaojs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconfejiao} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {goiabajs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={icongoiaba} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {mangojs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconmango} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {milhojs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconmilho} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {ortalicasjs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconortalicas} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {quiabojs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconquiabo} />
+              );
+            })}
+        </LayersControl.Overlay>
+      {/* End call layers _______________________________________________________________________________________________________________*/} 
 
       <LayerControl position="topright" >
 
