@@ -1,0 +1,159 @@
+/**
+ *
+ * LayerControl
+ *
+ */
+
+import React, { useState } from "react";
+// import styled from 'styled-components';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import IconButton from '@mui/material/IconButton';
+import { useMapEvents } from "react-leaflet";
+import { Util } from "leaflet";
+import Accordion from "@mui/material/Accordion";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandIcon from "@mui/icons-material/Expand";
+import LayersIcon from "@mui/icons-material/Layers";
+import UnfoldLessIcon from '@mui/icons-material/UnfoldLess';
+import lodashGroupBy from "lodash.groupby";
+import { LayersControlProvider } from "./layerControlContext";
+import Close from '@mui/icons-material/Close';
+
+import createControlledLayer from "./controlledLayer";
+
+// Classes used by Leaflet to position controls
+const POSITION_CLASSES = {
+  bottomleft: "leaflet-bottom leaflet-left",
+  bottomright: "leaflet-bottom leaflet-right",
+  topleft: "leaflet-top leaflet-left",
+  topright: "leaflet-top leaflet-right"
+};
+
+function LayerControl({ position, children }) {
+  const [collapsed, setCollapsed] = useState(true);
+  const [layers, setLayers] = useState([]);
+  const positionClass =
+    (position && POSITION_CLASSES[position]) || POSITION_CLASSES.topright;
+
+  const map = useMapEvents({
+    layerremove: () => {
+      // console.log("layer removed");
+    },
+    layeradd: () => {
+      // console.log("layer add");
+    },
+    overlayadd: (layer, extra) => {
+      // console.log(layer, extra);
+    }
+  });
+
+  const onLayerClick = layerObj => {
+    if (map?.hasLayer(layerObj.layer)) {
+      map.removeLayer(layerObj.layer);
+      setLayers(
+        layers.map(layer => {
+          if (layer.id === layerObj.id)
+            return {
+              ...layer,
+              checked: false
+            };
+          return layer;
+        })
+      );
+    } else {
+      map.addLayer(layerObj.layer);
+      setLayers(
+        layers.map(layer => {
+          if (layer.id === layerObj.id)
+            return {
+              ...layer,
+              checked: true
+            };
+          return layer;
+        })
+      );
+    }
+  };
+
+  const onGroupAdd = (layer, name, group) => {
+    setLayers(_layers => [
+      ..._layers,
+      {
+        layer,
+        group,
+        name,
+        checked: map?.hasLayer(layer),
+        id: Util.stamp(layer)
+      }
+    ]);
+  };
+
+  const groupedLayers = lodashGroupBy(layers, "group");
+
+  // console.log(groupedLayers, "groupedLayers");
+  return (
+    <LayersControlProvider
+      value={{
+        layers,
+        addGroup: onGroupAdd
+      }}
+    >
+      <div className={positionClass}>
+        <div className="leaflet-control leaflet-bar">
+          {
+            <Paper
+              onMouseEnter={() => setCollapsed(false)}
+              onMouseLeave={() => setCollapsed(false)}
+            >
+              {collapsed && (
+                <IconButton>
+                  <LayersIcon fontSize="default" />
+                </IconButton>
+              )}
+              {!collapsed &&
+                Object.keys(groupedLayers).map((section, index) => (
+                  <Accordion key={`${section} ${index}`}>
+                    <AccordionSummary
+                      expandIcon={<UnfoldLessIcon />}
+                      aria-controls="panel1a-content"
+                      id="panel1a-header"
+                    >
+                      <Typography>{section}</Typography>
+                    </AccordionSummary>
+                    {groupedLayers[section]?.map(layerObj => (
+                      <AccordionDetails>
+                        <FormControlLabel
+                          control={<Checkbox
+                            checked={layerObj.checked}
+                            onChange={() => onLayerClick(layerObj)}
+                            name="checkedB"
+                            color="primary" />}
+                          label={layerObj.name} />
+                      </AccordionDetails>
+                    ))}
+                  </Accordion>
+                ))}
+            </Paper>
+          }
+        </div>
+        {children}
+      </div>
+    </LayersControlProvider>
+  );
+}
+
+const GroupedLayer = createControlledLayer(function addGroup(
+  layersControl,
+  layer,
+  name,
+  group
+) {
+  layersControl.addGroup(layer, name, group);
+});
+
+export default LayerControl;
+export { GroupedLayer };

@@ -1,13 +1,333 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Space Mono', monospace, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(39, 38, 38);
+  overflow: auto !important;
+  overflow-y: scroll;
+  overflow-x: hidden !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #b4aacd;
+}
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #b4aacd;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgb(39, 38, 38);
+	border: 1px solid rgb(39, 38, 38);
+}
+
+.leaflet-container {
+  border: 10px solid rgb(39, 38, 38);
+  background: rgb(39, 38, 38);
+  max-height: 90vh;
+  max-width: 100%;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+.leaflet-control-zoom {
+  display: none;
+}
+
+.title-container {
+  max-height: 6vh;
+  height: 6vh;
+  position: relative;
+  margin: auto;
+  z-index: 998 !important;
+}
+
+.title {
+  font-family: 'VT323', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 3.0em;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #b4aacd;
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgb(39, 38, 38);
+  ;
+  border-radius: 25px;
+  padding: 18px;
+}
+
+.welcome {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0.95em;
+  font-weight: 300;
+  margin: auto;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  -ms-transform: translate(-50%, -80%);
+  transform: translate(-50%, -80%);
+  z-index: 998 !important;
+}
+
+.buttons {
+  -ms-transform: translate(0%, -100%);
+  transform: translate(0%, -100%);
+  float: left;
+  position: relative;
+  z-index: 999;
+  display: flex;
+}
+
+.css-ahj2mt-MuiTypography-root {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 1.1em !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
+  border: 1px solid rgba(39, 38, 38, 0.5) !important;
+  font-family: 'VT323', monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2em !important;
+  color: rgba(39, 38, 38, 1) !important;
+}
+
+.css-1wnsr1i {
+  overflow: auto;
+  top: 45% !important;
+  left: 22% !important;
+  height: 75vh;
+  font-family: 'Space Mono', monospace !important;
+  background-color: #b4aacd !important;
+  box-shadow: none !important;
+  --mask:
+    linear-gradient(#000 0 0) 50%/calc(100% - 9.25px) calc(100% - 9.25px) no-repeat,
+    radial-gradient(farthest-side, #000 98%, #0000) 0 0/10px 10px round;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  border: 10px solid rgb(39, 38, 38) !important;
+}
+
+.leaflet-control.leaflet-bar {
+  max-height: 80vh !important;
+  overflow-y: scroll !important;
+}
+
+.css-1ps6pg7-MuiPaper-root {
+  box-shadow: none !important;
+  --mask:
+    linear-gradient(#000 0 0) 50%/calc(100% - 9.25px) calc(100% - 9.25px) no-repeat,
+    radial-gradient(farthest-side, #000 98%, #0000) 0 0/10px 10px round;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  border-left: 10px solid rgb(39, 38, 38) !important;
+  border-bottom: 10px solid rgb(39, 38, 38) !important;
+}
+
+
+.MuiPaper-root {
+  background-color: #b4aacd !important;
+  z-index: 998 !important;
+}
+
+.css-h93ljk-MuiTypography-root {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 1.1em !important;
+}
+
+.css-r40f8v-MuiTypography-root {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 0.8em !important;
+  line-height: 1.2em !important;
+  font-weight: 800 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.css-sox5kk-MuiBackdrop-root {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  font-family: 'VT323', monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2em !important;
+  color: #b4aacd !important;
+  background-color: rgb(39, 38, 38) !important;
+  z-index: 999 !important;
+  border-radius: 8px !important;
+  left: 15px !important;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+  padding: 20px !important;
+}
+
+.closebutton {
+  position: absolute !important;
+  top: 0%;
+  left: 85% !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  background-color: #b4aacd;
+}
+
+.css-ag7rrr-MuiTypography-root {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 1.1em !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.css-15v22id-MuiAccordionDetails-root {
+  padding: 0px 16px 0px !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+  padding: 1px !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  color: rgb(39, 38, 38) !important;
+}
+
+.css-ecpxie-MuiTypography-root {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 0.8em !important;
+  font-weight: 800 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.css-2ulfj5-MuiTypography-root {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 1.1em !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.css-ix1f03-MuiTypography-root {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 0.8em !important;
+  font-weight: 800 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.css-qpjsw6-MuiPaper-root-MuiCard-root {
+  border: 1px solid rgba(39, 38, 38, 0.2);
+}
+
+.css-gfjx9c-MuiPaper-root-MuiCard-root {
+  border: 1px solid rgba(39, 38, 38, 0.2);
+}
+
+.leaflet-control-layers-toggle {
+  font-family: 'Space Mono', monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #b4aacd !important;
+  background-image: none !important;
+  width: 30px !important;
+  height: 30px !important;
+  box-shadow: none !important;
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  --mask:
+    linear-gradient(#000 0 0) 50%/calc(100% - 9.25px) calc(100% - 9.25px) no-repeat,
+    radial-gradient(farthest-side, #000 98%, #0000) 0 0/10px 10px round;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  border: 8px solid rgb(39, 38, 38) !important;
+}
+
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  border: none !important;
+}
+
+.leaflet-control-layers {
+  background: #b4aacd !important;
+}
+
+.leaflet-top .leaflet-control {
+  top: 15px;
+  right: 15px;
+}
+
+.leaflet-control-layers-list {
+  font-family: 'Space Mono', monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip{
+  box-shadow: none !important;
+  color: rgb(39, 38, 38) !important;
+  font-family: 'Space Mono', monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #b4aacd !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: none !important;
+  text-align: center !important;
+}
+
+.leaflet-popup-tip-container {
+  display: none !important;
+}
+
+.modal-modal-description{
+  display: inline-block;
+} 
+
+@media only screen and (max-width: 1000px) {
+  .buttons {
+    -ms-transform: translate(0%, -200%);
+    transform: translate(0%, -200%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .css-1wnsr1i {
+    overflow: auto;
+    top: 50% !important;
+    left: 50% !important;
+    width: 250px !important;
+    height: 65vh !important;
+  }
+
+  .closebutton {
+    position: absolute;
+    left: 0%;
+    -ms-transform: translate(-50%, -15%);
+    transform: translate(-50%, -15%);
+  }  
+
 }

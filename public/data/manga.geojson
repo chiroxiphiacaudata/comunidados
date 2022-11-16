@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "manga",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "type": "manga" }, "geometry": { "type": "Point", "coordinates": [ -43.44089044614902, -22.640666428467213 ] } }
+]
+}

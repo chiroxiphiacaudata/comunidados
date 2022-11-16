@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "coco",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "type": "coco" }, "geometry": { "type": "Point", "coordinates": [ -43.377034671924505, -22.623073604934067 ] } },
+{ "type": "Feature", "properties": { "type": "coco" }, "geometry": { "type": "Point", "coordinates": [ -43.438515462091502, -22.639591966069645 ] } }
+]
+}

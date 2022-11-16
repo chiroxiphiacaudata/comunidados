@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "banana",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "type": "banana" }, "geometry": { "type": "Point", "coordinates": [ -43.44033210700713, -22.639605584097495 ] } },
+{ "type": "Feature", "properties": { "type": "banana" }, "geometry": { "type": "Point", "coordinates": [ -43.391726641995724, -22.658815174186284 ] } }
+]
+}
