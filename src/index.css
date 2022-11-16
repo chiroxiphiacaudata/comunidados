@@ -119,6 +119,15 @@ code {
   color: rgba(39, 38, 38, 1) !important;
 }
 
+.css-79xub {
+  border: 1px solid rgba(39, 38, 38, 0.5) !important;
+  font-family: 'VT323', monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2em !important;
+  color: rgba(39, 38, 38, 1) !important;
+}
+
 .css-1wnsr1i {
   overflow: auto;
   top: 45% !important;
@@ -173,6 +182,11 @@ code {
   font-size: 1.1em !important;
 }
 
+.css-t1nuxs {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 1.1em !important;
+}
+
 .css-r40f8v-MuiTypography-root {
   font-family: 'Space Mono', monospace !important;
   font-size: 0.8em !important;
@@ -198,7 +212,23 @@ code {
   left: 15px !important;
 }
 
+.css-1ujsas3 {
+  font-family: 'VT323', monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2em !important;
+  color: #b4aacd !important;
+  background-color: rgb(39, 38, 38) !important;
+  z-index: 999 !important;
+  border-radius: 8px !important;
+  left: 15px !important;
+}
+
 .MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+  padding: 20px !important;
+}
+
+.css-1yxmbwk {
   padding: 20px !important;
 }
 
@@ -213,6 +243,13 @@ code {
 }
 
 .css-ag7rrr-MuiTypography-root {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 1.1em !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.css-zq6grw {
   font-family: 'Space Mono', monospace !important;
   font-size: 1.1em !important;
   -webkit-font-smoothing: antialiased;
@@ -240,6 +277,10 @@ code {
   color: rgb(39, 38, 38) !important;
 }
 
+.css-zun73v.Mui-checked, .css-zun73v.MuiCheckbox-indeterminate {
+  color: rgb(39, 38, 38) !important;
+}
+
 .css-ecpxie-MuiTypography-root {
   font-family: 'Space Mono', monospace !important;
   font-size: 0.8em !important;
@@ -255,7 +296,22 @@ code {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.css-1anx036 {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 1.1em !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .css-ix1f03-MuiTypography-root {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 0.8em !important;
+  font-weight: 800 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.css-zx0575 {
   font-family: 'Space Mono', monospace !important;
   font-size: 0.8em !important;
   font-weight: 800 !important;
