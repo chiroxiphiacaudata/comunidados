@@ -49,7 +49,9 @@ const App = () => {
       <TileLayer
         url="https://www.alessandromusetta.com/geo/tiles/tingua/tiles/{z}/{x}/{y}.png" />
 
-        <LayersControl.Overlay name="Marker with popup">
+
+      {/* Start call layers */} 
+        <LayersControl.Overlay>
           {recreativojs.features.map((feature, index) => {
             return (
               <Marker
@@ -60,7 +62,7 @@ const App = () => {
             );
           })}
         </LayersControl.Overlay>
-        <LayersControl.Overlay name="Marker with popup">
+        <LayersControl.Overlay>
         {espjs.features.map((feature, index) => {
             return (
               <Marker
@@ -74,8 +76,58 @@ const App = () => {
             );
           })}
         </LayersControl.Overlay>
-        
+        <LayersControl.Overlay>
+        {inteljs.features.map((feature, index) => {
+            return (
+              <Marker
+                key={index}
+                position={L.latLng(feature.geometry.coordinates.reverse())}
+                icon={iconintell} >
+                  <Popup>
+                  <p>{feature.properties.name}</p> 
+                  </Popup>
+              </Marker>
+            );
+          })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {mistojs.features.map((feature, index) => {
+            return (
+              <Marker
+                key={index}
+                position={L.latLng(feature.geometry.coordinates.reverse())}
+                icon={iconmisto} >
+                  <Popup>
+                  <p>{feature.properties.name}</p> 
+                  </Popup>
+              </Marker>
+            );
+          })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {lixojs.features.map((feature, index) => {
+              return (
+                <Marker
+                  key={index}
+                  position={L.latLng(feature.geometry.coordinates.reverse())}
+                  icon={iconlixo} />
+              );
+            })}
+        </LayersControl.Overlay>
+        <LayersControl.Overlay>
+        {abacaxijs.features.map((feature, index) => {
+            return (
+              <Marker
+                key={index}
+                position={L.latLng(feature.geometry.coordinates.reverse())}
+                icon={iconabacaxi} />
+            );
+          })}
+        </LayersControl.Overlay>
 
+
+
+      {/* End call layers */} 
 
       <LayerControl position="topright" >
 
