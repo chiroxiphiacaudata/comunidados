@@ -85,7 +85,7 @@ export default function Stories() {
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flex: '1 0 auto' }}>
                   <Typography component="div" variant="h5">
-                    Entrevista com João, agricultor 
+                    Na roça com João, agricultor 
                   </Typography>
                   <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                     Áudio
