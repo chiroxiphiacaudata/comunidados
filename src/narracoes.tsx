@@ -14,7 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import { useTheme } from '@mui/material/styles';
 import ReactAudioPlayer from "react-audio-player";
 import ReactPlayer from 'react-player';
-import { Profumo, Mutirao, Diagnostico1, Diagnostico2, Plaquinhas } from './text';
+import { Profumo, Mutirao, Diagnostico1, Diagnostico2, Plaquinhas, RoleIguacuano } from './text';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -69,6 +69,24 @@ export default function Stories() {
                  A Exposição Fotográfica - Belezas da Baixada Fluminense, inaugura no dia 16 de Abril 2023. A exposição estará aberta ao público durante todo o mês na Praça de Tinguá - Nova Iguaçu. 
                 </Typography>
               </CardContent>
+            </Card>
+
+            <Card sx={{ maxWidth: 400 }}>
+              <CardMedia
+                style={{ margin: '2%', width: 372 }}
+                component="img"
+                height="250"
+                image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221227/316053953_701024761152361_1630399678539113923_n.jpg"
+                alt=""
+              />
+              <CardContent>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  O EcoMuseu Iguassú participa do Rolê Iguaçuano promovido por a Secretaria de Cultura de Estado de Cultura e Economia Criativa do Rio de Janeiro 
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <RoleIguacuano />
+              </CardActions>
             </Card>
 
             <Card sx={{ maxWidth: 400 }}>

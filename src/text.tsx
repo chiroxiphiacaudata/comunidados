@@ -27,6 +27,55 @@ const style = {
   p: 4,
 };
 
+export function RoleIguacuano() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  return (
+    <div>
+      <Button onClick={handleOpen} variant="outlined" >Leia mais</Button>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        disableEnforceFocus
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Box sx={style}>
+            <IconButton onClick={handleClose} className="closebutton">
+              <Close />
+            </IconButton>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20221227/316053953_701024761152361_1630399678539113923_n.jpg'
+              alt=""
+            />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Governo do Estado do Rio de Janeiro, Secretaria de Cultura de Estado de Cultura e Economia Criativa do Rio de Janeiro através do Edital Cultura Presente nas Redes 2 apresentam Rolê Iguaçuano.
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              No Rolê Iguaçuano de hoje, indicamos a vocês o EcoMuseu Iguassú que fica em Tinguá na Rua Paraná, 34. <br /><br />
+            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', maxWidth: 400 }}>
+              <ReactPlayer height='100%' controls url="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221227/Role-Iguacuano.mp4" />
+            </Box>
+          </Box>
+        </Fade>
+      </Modal>
+    </div>
+  );
+}
+
 export function Plaquinhas() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -61,13 +110,13 @@ export function Plaquinhas() {
               alt=" Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá"
             />
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-             🌳 Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram (26/12/22) da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá.                
+              🌳 Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram (26/12/22) da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá.
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               ➡️ As árvores do circuito foram identificadas anteriormente pelos pesquisadores do Jardim Botânico do RJ: Haroldo de Lima, Claudia Barros e Lara Decache.
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              📌 As plaquinhas com a identificação foram confeccionadas e posteriormente doadas pela Cedae para esse circuito. 
+              📌 As plaquinhas com a identificação foram confeccionadas e posteriormente doadas pela Cedae para esse circuito.
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               💦 Os jovens tiveram a oportunidade de registrar a natureza na UC e observar as aves e toda a Biodiversidade da Unidade.
