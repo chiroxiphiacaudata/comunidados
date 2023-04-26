@@ -27,7 +27,91 @@ const style = {
   p: 4,
 };
 
-export function Diagnostico() {
+export function Plaquinhas() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  return (
+    <div>
+      <Button onClick={handleOpen} variant="outlined" >Leia mais</Button>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        disableEnforceFocus
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Box sx={style}>
+            <IconButton onClick={handleClose} className="closebutton">
+              <Close />
+            </IconButton>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20221226/321796614_717525479747545_5700836174740805761_n.jpg'
+              alt=" Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá"
+            />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+             🌳 Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram (26/12/22) da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá.                
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              ➡️ As árvores do circuito foram identificadas anteriormente pelos pesquisadores do Jardim Botânico do RJ: Haroldo de Lima, Claudia Barros e Lara Decache.
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              📌 As plaquinhas com a identificação foram confeccionadas e posteriormente doadas pela Cedae para esse circuito. 
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              💦 Os jovens tiveram a oportunidade de registrar a natureza na UC e observar as aves e toda a Biodiversidade da Unidade.
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Fotos: alunos da Casa do Jovem Fotógrafo - Onda Verde
+            </Typography>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221226/322644059_550831886932630_4730045710192965551_n.jpg"
+              alt=" Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá"
+            />
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221226/321962950_5920994397957252_6222289159103750655_n.jpg"
+              alt=" Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá"
+            />
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221226/321831135_905595627128858_8602636201503750352_n.jpg"
+              alt=" Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá"
+            />
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221226/321796405_553064646415884_8078850280229199057_n.jpg"
+              alt=" Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá"
+            />
+          </Box>
+        </Fade>
+      </Modal>
+    </div>
+  );
+}
+
+
+export function Diagnostico2() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -74,7 +158,10 @@ export function Diagnostico() {
               🗑️ Vale a pena lembrar que “lixo” é uma palavra geral para designar as palavras “resíduo” (os descartes que ainda têm alguma utilização possível por meio da reciclagem ou reutilização) e “rejeito” (aqueles que já não podem ser utilizados novamente).
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              ♻️ Reciclar é preservar o nosso próprio planeta!!<br /><br /><br />
+              ♻️ Reciclar é preservar o nosso próprio planeta!!<br /><br />
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Fotos: alunos da Casa do Jovem Fotógrafo - Onda Verde
             </Typography>
             <Box sx={{ display: 'flex', alignItems: 'center', maxWidth: 400 }}>
               <ReactPlayer height='100%' controls url="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221129/317711830_908169863398322_1982300064525199344_n.mp4" />
@@ -168,7 +255,10 @@ export function Mutirao() {
               Além dos sacos de lixo, foi coletado uma sacola de bitucas de cigarro, que foi devidamente destinado ao coletor de bitucas.
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Os alunos foram coordenados pelo técnico ambiental Marcos Martins, juntamente com o arte educador Ivan Machado. <br /><br /><br />
+              Os alunos foram coordenados pelo técnico ambiental Marcos Martins, juntamente com o arte educador Ivan Machado. <br /><br />
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Fotos: alunos do Ambiente Jovem - NUP Onda Verde
             </Typography>
             <CardMedia
               style={{ marginTop: '2%', maxWidth: 400 }}
@@ -218,6 +308,73 @@ export function Mutirao() {
     </div>
   );
 }
+
+export function Diagnostico1() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  return (
+    <div>
+      <Button onClick={handleOpen} variant="outlined" >Leia mais</Button>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        disableEnforceFocus
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Box sx={style}>
+            <IconButton onClick={handleClose} className="closebutton">
+              <Close />
+            </IconButton>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20220818/308376344_3303969729924179_6878166015249261432_n.jpg'
+              alt="No dia 24/10/22 os alunos do Ambiente Jovem - NUP Onda Verde, realizaram um multirão de limpeza na rua das cachoeiras em Tinguá - RJ"
+            />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              📋 No dia de ontem (18/08/22) os alunos da Casa do Jovem Fotógrafo iniciaram um diagnóstico ambiental da comunidade de Tinguá utilizando a plataforma KoBotoolbox.
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              📲 Esta plataforma será utilizada até o fim do projeto para o mapeamento de problemas e eventuais soluções socioambientais na comunidade de Tinguá, com a participação das escolas, da comunidade e dos jovens ativistas do projeto.
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              💪💧🌍Ao longo do projeto, os dados ambientais levantados serão debatidos em fóruns populares, reuniões de conselhos ambientais das UCs locais e prefeitura.
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Fotos: alunos da Casa do Jovem Fotógrafo - Onda Verde
+            </Typography>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20220818/308540594_485542253481591_1781687780228134008_n.jpg"
+              alt="No dia 24/10/22 os alunos do Ambiente Jovem - NUP Onda Verde, realizaram um multirão de limpeza na rua das cachoeiras em Tinguá - RJ"
+            />
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20220818/308795436_1262865877590408_9106620889729543478_n.jpg"
+              alt="No dia 24/10/22 os alunos do Ambiente Jovem - NUP Onda Verde, realizaram um multirão de limpeza na rua das cachoeiras em Tinguá - RJ"
+            />
+          </Box>
+        </Fade>
+      </Modal>
+    </div>
+  );
+}
+
 
 
 export function Profumo() {

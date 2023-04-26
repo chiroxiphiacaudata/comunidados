@@ -14,7 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import { useTheme } from '@mui/material/styles';
 import ReactAudioPlayer from "react-audio-player";
 import ReactPlayer from 'react-player';
-import { Profumo, Mutirao, Diagnostico } from './text';
+import { Profumo, Mutirao, Diagnostico1, Diagnostico2, Plaquinhas } from './text';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -58,7 +58,55 @@ export default function Stories() {
 
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
-                style={{margin: '2%', width: 372}}
+                style={{ margin: '2%', width: 372 }}
+                component="img"
+                height="250"
+                image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20230416/330249744_776288003718030_7483664101693489802_n.jpg"
+                alt=""
+              />
+              <CardContent>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                 A Exposição Fotográfica - Belezas da Baixada Fluminense, inaugura no dia 16 de Abril 2023. A exposição estará aberta ao público durante todo o mês na Praça de Tinguá - Nova Iguaçu. 
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card sx={{ maxWidth: 400 }}>
+              <CardMedia
+                style={{ margin: '2%', width: 372 }}
+                component="img"
+                height="250"
+                image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221226/321796614_717525479747545_5700836174740805761_n.jpg"
+                alt=""
+              />
+              <CardContent>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  🌳 Os alunos  da Casa do Jovem Fotógrafo conheceram a Sede da Reserva Biológica do Tinguá, e participaram da colocação das plaquinhas de identificação das árvores da trilha do Circuito das Águas, agora além do contato com a natureza a trilha senso-perceptiva explica um pedacinho da riqueza da flora da REBIO do Tinguá.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Plaquinhas />
+              </CardActions>
+            </Card>
+
+            <Card sx={{ maxWidth: 400 }}>
+              <CardMedia
+                style={{ margin: '2%', width: 372 }}
+                component="img"
+                height="400"
+                image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221028/308540594_485542253481591_1781687780228134008_n.jpg"
+                alt=""
+              />
+              <CardContent>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  Em aproximadamente dois meses de funcionamento do Peixe PapaPet, situado na sede da entidade ambientalista Onda Verde (Rua Nossa Senhora da Conceição, 6), deixaram de ser encaminhados para os rios e mares 9 sacos de garrafas pet.
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card sx={{ maxWidth: 400 }}>
+              <CardMedia
+                style={{ margin: '2%', width: 372 }}
                 component="img"
                 height="220"
                 image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221127/316994212_654178176420565_3872037346402276965_n.jpg"
@@ -70,13 +118,13 @@ export default function Stories() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Diagnostico />
+                <Diagnostico2 />
               </CardActions>
             </Card>
 
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
-                style={{margin: '2%', width: 372}}
+                style={{ margin: '2%', width: 372 }}
                 component="img"
                 height="220"
                 image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20221025/312972639_1098601624132143_1564327773776190315_n.jpg"
@@ -94,7 +142,7 @@ export default function Stories() {
 
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
-                style={{margin: '2%', width: 372}}
+                style={{ margin: '2%', width: 372 }}
                 component="img"
                 height="220"
                 image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20220927/308947525_1091159291795246_1599538503510034495_n.jpg"
@@ -102,9 +150,27 @@ export default function Stories() {
               />
               <CardContent>
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                   O sítio do André, com o apoio da Onda Verde, está realizando uma ação de restauração florestal com espécies da Mata Atlântica.
+                  O sítio do André, com o apoio da Onda Verde, está realizando uma ação de restauração florestal com espécies da Mata Atlântica.
                 </Typography>
               </CardContent>
+            </Card>
+
+            <Card sx={{ maxWidth: 400 }}>
+              <CardMedia
+                style={{ margin: '2%', width: 372 }}
+                component="img"
+                height="220"
+                image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20220818/308376344_3303969729924179_6878166015249261432_n.jpg"
+                alt="📋 Dia de Diagnóstico Ambiental em Tinguá - Mutirão para coleta de Resíduos Sólidos ♻️"
+              />
+              <CardContent>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  📋 No dia de ontem (18/08/22) os alunos da Casa do Jovem Fotógrafo iniciaram um diagnóstico ambiental da comunidade de Tinguá utilizando a plataforma KoBotoolbox.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Diagnostico1 />
+              </CardActions>
             </Card>
 
             <Card sx={{ maxWidth: 400 }}>
