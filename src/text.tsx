@@ -73,6 +73,9 @@ export function CinemaAmbiental() {
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               Além dos 4 filmes da oficina, a Mostra contará ainda com mais 9 filmes de temática ambiental, como o clássico “Ilha das Flores”, “Paraíba pede socorro”, sobre o rio Paraíba do Sul, e “Salvem o rio”, sobre o rio Pavuna. Entre os temas abordados pelos filmes, estão o consumo consciente, a mitigação de desperdícios e a destinação correta do lixo, aproximando os filmes da realidade dos participantes.<br /><br />
             </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+             GABRIEL TUSSINI, <a href='https://oeco.org.br/salada-verde/mostra-de-cinema-em-nova-iguacu-rj-exibe-filmes-ambientais-de-jovens-da-regiao/'>Mostra de cinema em Nova Iguaçu (RJ) exibe filmes ambientais de jovens da região</a>, ((o))eco<br /><br />
+            </Typography>
             <CardMedia
               style={{ marginTop: '2%', maxWidth: 400 }}
               component="img"
