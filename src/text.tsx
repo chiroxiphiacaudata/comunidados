@@ -27,6 +27,80 @@ const style = {
   p: 4,
 };
 
+
+export function CinemaAmbiental() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  return (
+    <div>
+      <Button onClick={handleOpen} variant="outlined" >Leia mais</Button>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        disableEnforceFocus
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Box sx={style}>
+            <IconButton onClick={handleClose} className="closebutton">
+              <Close />
+            </IconButton>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="800"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20230728/tingua_na_lata.jpg'
+              alt=""
+            />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              A Mostra de Cinema Ambiental Onda Verde começa nesta quinta (27), na sede da ONG Onda Verde, em Nova Iguaçu (RJ). Com exibição gratuita de 14 filmes durante os 3 dias de evento, o destaque vai para os 4 filmes produzidos pelos 50 jovens da Baixada Fluminense que participaram da Oficina de Cinema Ambiental Onda Verde, realizada desde fevereiro. O foco das obras é a melhora da qualidade de vida do Tinguá, bairro onde vivem e local da sede da Onda Verde.
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Os filmes produzidos pelos participantes da oficina são “Ewé – O caminho das folhas”, dirigido por Luiz Lopes, que destaca a relação dos candomblecistas com a natureza e combate noções ancoradas no racismo ambiental sobre a religião; “Os que ficam”, dirigido por Gustavo Roger e Antonio Douglas, que aborda o potencial turístico da região e a importância da preservação dos recursos naturais; “Tinguá – A riqueza das joias da coroa”, dirigido por Ana Beatriz e Raphael Santiago, que fala da importância hídrica do bairro e a necessidade de mobilização pelo direito à água, problema constante na região; e “Tinguá na lata”, dirigido por Fabíola Rocha, onde os participantes buscam respostas aos diversos descasos e mostram sua insatisfação com os problemas do bairro.<br /><br />
+            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', maxWidth: 400 }}>
+              <ReactPlayer height='100%' controls url="https://www.alessandromusetta.com/geo/tiles/tingua/data/20230728/CinemaAmbiental.mp4" />
+            </Box>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Além dos 4 filmes da oficina, a Mostra contará ainda com mais 9 filmes de temática ambiental, como o clássico “Ilha das Flores”, “Paraíba pede socorro”, sobre o rio Paraíba do Sul, e “Salvem o rio”, sobre o rio Pavuna. Entre os temas abordados pelos filmes, estão o consumo consciente, a mitigação de desperdícios e a destinação correta do lixo, aproximando os filmes da realidade dos participantes.<br /><br />
+            </Typography>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="800"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20230728/joias.jpg'
+              alt=""
+            />
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="800"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20230728/ewe.jpg'
+              alt=""
+            />
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="800"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20230728/ficam.jpg'
+              alt=""
+            />
+          </Box>
+        </Fade>
+      </Modal>
+    </div>
+  );
+}
+
 export function RoleIguacuano() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);

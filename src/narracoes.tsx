@@ -14,7 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import { useTheme } from '@mui/material/styles';
 import ReactAudioPlayer from "react-audio-player";
 import ReactPlayer from 'react-player';
-import { Profumo, Mutirao, Diagnostico1, Diagnostico2, Plaquinhas, RoleIguacuano } from './text';
+import { Profumo, Mutirao, Diagnostico1, Diagnostico2, Plaquinhas, RoleIguacuano, CinemaAmbiental } from './text';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -61,12 +61,30 @@ export default function Stories() {
                 style={{ margin: '2%', width: 372 }}
                 component="img"
                 height="250"
+                image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20230728/oficina.jpg"
+                alt=""
+              />
+              <CardContent>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  Mostra de Cinema Ambiental Onda Verde exibe, entre 28 e 30 de julho de 2023, 14 filmes com temática ambiental; 4 das produções são de jovens participantes de oficina ligada ao evento
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <CinemaAmbiental />
+              </CardActions>
+            </Card>
+
+            <Card sx={{ maxWidth: 400 }}>
+              <CardMedia
+                style={{ margin: '2%', width: 372 }}
+                component="img"
+                height="250"
                 image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20230416/330249744_776288003718030_7483664101693489802_n.jpg"
                 alt=""
               />
               <CardContent>
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                 A Exposição Fotográfica - Belezas da Baixada Fluminense, inaugura no dia 16 de Abril 2023. A exposição estará aberta ao público durante todo o mês na Praça de Tinguá - Nova Iguaçu. 
+                  A Exposição Fotográfica - Belezas da Baixada Fluminense, inaugura no dia 16 de Abril 2023. A exposição estará aberta ao público durante todo o mês na Praça de Tinguá - Nova Iguaçu.
                 </Typography>
               </CardContent>
             </Card>
@@ -81,7 +99,7 @@ export default function Stories() {
               />
               <CardContent>
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  O EcoMuseu Iguassú participa do Rolê Iguaçuano promovido por a Secretaria de Cultura de Estado de Cultura e Economia Criativa do Rio de Janeiro 
+                  O EcoMuseu Iguassú participa do Rolê Iguaçuano promovido por a Secretaria de Cultura de Estado de Cultura e Economia Criativa do Rio de Janeiro
                 </Typography>
               </CardContent>
               <CardActions>
