@@ -14,7 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import { useTheme } from '@mui/material/styles';
 import ReactAudioPlayer from "react-audio-player";
 import ReactPlayer from 'react-player';
-import { Profumo, Mutirao, Diagnostico1, Diagnostico2, Plaquinhas, RoleIguacuano, CinemaAmbiental } from './text';
+import { Profumo, Mutirao, Diagnostico1, Diagnostico2, Plaquinhas, RoleIguacuano, CinemaAmbiental, EstacaoSociambiental, EstacoesEstradaFerro } from './text';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -56,6 +56,27 @@ export default function Stories() {
               <Close />
             </IconButton>
 
+            {/* Início da narração */}
+            <Card sx={{ maxWidth: 400 }}>
+              <CardMedia
+                style={{ margin: '2%', width: 372 }}
+                component="img"
+                height="250"
+                image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20241122/467868563_2274951316212985_2495551666205615212_n.jpg"
+                alt=""
+              />
+              <CardContent>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  Inauguração da 1ª Estação Socioambiental de Tinguá: Um Marco para a Sustentabilidade.<br />No dia 21 de novembro de 2024, foi inaugurada a primeira Estação Socioambiental de Tinguá, um marco histórico para a conscientização ambiental e a educação cidadã na Baixada Fluminense. A Secretaria Municipal de Agricultura e Meio Ambiente (SEMAM) teve a honra de participar deste evento transformador, que reforça o compromisso com a preservação do meio ambiente e o desenvolvimento sustentável.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <EstacaoSociambiental />
+              </CardActions>
+            </Card>
+            {/* Fim da narração */}
+
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
                 style={{ margin: '2%', width: 372 }}
@@ -73,7 +94,29 @@ export default function Stories() {
                 <CinemaAmbiental />
               </CardActions>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
+            <Card sx={{ maxWidth: 400 }}>
+              <CardMedia
+                style={{ margin: '2%', width: 372 }}
+                component="img"
+                height="250"
+                image="https://www.alessandromusetta.com/geo/tiles/tingua/data/20230714/103625210.jpg"
+                alt=""
+              />
+              <CardContent>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  As estações da antiga Estrada de Ferro Rio D'Ouro, em Nova Iguaçu, na Baixada Fluminense, estão sendo transformadas em espaços dedicados à cultura. Durante a Festa do Aipim, no último mês de julho de 2023, a Estação de Cultura do Tinguá foi a primeira inaugurada, já recebendo uma exposição com os primeiros objetos arqueológicos encontrados no Parque Histórico e Arqueológico de Iguassú Velha.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <EstacoesEstradaFerro />
+              </CardActions>
+            </Card>
+            {/* Fim da narração */}
+
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
                 style={{ margin: '2%', width: 372 }}
@@ -88,7 +131,9 @@ export default function Stories() {
                 </Typography>
               </CardContent>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
                 style={{ margin: '2%', width: 372 }}
@@ -106,7 +151,9 @@ export default function Stories() {
                 <RoleIguacuano />
               </CardActions>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
                 style={{ margin: '2%', width: 372 }}
@@ -124,7 +171,9 @@ export default function Stories() {
                 <Plaquinhas />
               </CardActions>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
                 style={{ margin: '2%', width: 372 }}
@@ -139,7 +188,9 @@ export default function Stories() {
                 </Typography>
               </CardContent>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
                 style={{ margin: '2%', width: 372 }}
@@ -157,7 +208,9 @@ export default function Stories() {
                 <Diagnostico2 />
               </CardActions>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
                 style={{ margin: '2%', width: 372 }}
@@ -175,7 +228,9 @@ export default function Stories() {
                 <Mutirao />
               </CardActions>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
                 style={{ margin: '2%', width: 372 }}
@@ -190,7 +245,9 @@ export default function Stories() {
                 </Typography>
               </CardContent>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardMedia
                 style={{ margin: '2%', width: 372 }}
@@ -208,7 +265,9 @@ export default function Stories() {
                 <Diagnostico1 />
               </CardActions>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -222,7 +281,9 @@ export default function Stories() {
                 <Profumo />
               </CardActions>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ maxWidth: 400 }}>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -233,7 +294,9 @@ export default function Stories() {
                 <ReactPlayer controls url='https://vimeo.com/387297233' />
               </Box>
             </Card>
+            {/* Fim da narração */}
 
+            {/* Início da narração */}
             <Card sx={{ display: 'flex', maxWidth: 400 }}>
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flex: '1 0 auto' }}>
@@ -255,10 +318,11 @@ export default function Stories() {
                 style={{ height: "150px", padding: "2%" }}
                 component="img"
                 sx={{ width: 151 }}
-                image="./icons/farmer.png"
+                image="https://www.alessandromusetta.com/geo/tiles/tingua/data/audio/farmer.png"
                 alt="Entrevista com João, agricultor orgânico"
               />
             </Card>
+            {/* Fim da narração */}
 
           </Box>
         </Fade>

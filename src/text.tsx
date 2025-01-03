@@ -28,6 +28,59 @@ const style = {
 };
 
 
+
+export function EstacaoSociambiental() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  return (
+    <div>
+      <Button onClick={handleOpen} variant="outlined" >Leia mais</Button>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        disableEnforceFocus
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Box sx={style}>
+            <IconButton onClick={handleClose} className="closebutton">
+              <Close />
+            </IconButton>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="600"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20241122/467868563_2274951316212985_2495551666205615212_n.jpg'
+              alt=""
+            />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              A Estação Socioambiental tem como principal objetivo incentivar práticas educativas inovadoras por meio de atividades interativas. A iniciativa busca sensibilizar a comunidade sobre a importância da conservação ambiental e a adoção de comportamentos mais sustentáveis.<br /><br />O que o espaço oferece?<br /><br />Instalações modernas e acessíveis: projetadas para garantir a inclusão e atender a diversos públicos.<br /><br />Atividades práticas e interativas: promovendo o aprendizado por meio da experiência.<br /><br />Programas de educação ambiental: voltados para a formação de uma sociedade mais consciente.<br /><br />Palestras e workshops: abordando temas relacionados à sustentabilidade e inovação.<br /><br />Impactos da Estação Socioambiental de Tinguá<br /><br />onscientização ambiental: um passo decisivo para engajar a população na proteção do meio ambiente.<br /><br />ducação cidadã: um espaço para formar cidadãos mais conscientes e responsáveis.<br /><br />Inovação e sustentabilidade: incentivo ao desenvolvimento de práticas sustentáveis.<br /><br />Modelo de referência: inspiração para outras cidades replicarem iniciativas similares.<br /><br />
+            </Typography>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="200"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20241122/467863213_420577727791675_2095876979894051833_n.jpg'
+              alt=""
+            />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              “Estou muito feliz em participar da reinauguração da Reserva Biológica do Tinguá, um evento que simboliza não apenas a revitalização de um espaço essencial para a conservação da biodiversidade, mas também o fortalecimento do compromisso coletivo com o meio ambiente”, destacou Marcela Diniz, Diretora do Parque Natural Municipal de Nova Iguaçu.<br /><br />A inauguração da Estação Socioambiental de Tinguá representa um grande avanço para a região, consolidando-se como um símbolo de inovação e preservação ambiental.            </Typography>
+          </Box>
+        </Fade>
+      </Modal>
+    </div>
+  );
+}
+
 export function CinemaAmbiental() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -74,7 +127,7 @@ export function CinemaAmbiental() {
               Além dos 4 filmes da oficina, a Mostra contará ainda com mais 9 filmes de temática ambiental, como o clássico “Ilha das Flores”, “Paraíba pede socorro”, sobre o rio Paraíba do Sul, e “Salvem o rio”, sobre o rio Pavuna. Entre os temas abordados pelos filmes, estão o consumo consciente, a mitigação de desperdícios e a destinação correta do lixo, aproximando os filmes da realidade dos participantes.<br /><br />
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-             GABRIEL TUSSINI, <a href='https://oeco.org.br/salada-verde/mostra-de-cinema-em-nova-iguacu-rj-exibe-filmes-ambientais-de-jovens-da-regiao/'>Mostra de cinema em Nova Iguaçu (RJ) exibe filmes ambientais de jovens da região</a>, ((o))eco<br /><br />
+              GABRIEL TUSSINI, <a href='https://oeco.org.br/salada-verde/mostra-de-cinema-em-nova-iguacu-rj-exibe-filmes-ambientais-de-jovens-da-regiao/'>Mostra de cinema em Nova Iguaçu (RJ) exibe filmes ambientais de jovens da região</a>, ((o))eco<br /><br />
             </Typography>
             <CardMedia
               style={{ marginTop: '2%', maxWidth: 400 }}
@@ -103,6 +156,56 @@ export function CinemaAmbiental() {
     </div>
   );
 }
+
+export function EstacoesEstradaFerro() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  return (
+    <div>
+      <Button onClick={handleOpen} variant="outlined" >Leia mais</Button>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        disableEnforceFocus
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <Box sx={style}>
+            <IconButton onClick={handleClose} className="closebutton">
+              <Close />
+            </IconButton>
+            <CardMedia
+              style={{ marginTop: '2%', maxWidth: 400 }}
+              component="img"
+              height="400"
+              image='https://www.alessandromusetta.com/geo/tiles/tingua/data/20230714/103625210.jpg'
+              alt=""
+            />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Uma antiga ferrovia que ligava o Rio de Janeiro à Baixada Fluminense está se tornando um polo cultural em Nova Iguaçu.<br />A primeira Estação de Cultura do município foi inaugurada em julho de 2023, no distrito de Tinguá, durante a tradicional Festa do Aipim. O espaço abriga uma mostra de objetos arqueológicos descobertos no Parque Histórico e Arqueológico de Iguassú Velha, que revelam aspectos da história e da cultura da região.
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              A Estação Tinguá faz parte do conjunto arquitetônico da antiga Estrada de Ferro Rio D’Ouro, construída em 1876 para transportar materiais e operários envolvidos na obra das adutoras da Serra do Tinguá, que abasteciam a capital fluminense. Em 1883, a estação foi aberta ao público e funcionou até os anos 1970. Parte do seu trajeto foi aproveitado na construção da Linha 2 do metrô, inaugurada em 1998 na Pavuna.<br /><br />Video: @daiturismo<br /><br />
+            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', maxWidth: 400 }}>
+              <ReactPlayer height='100%' controls url='https://www.alessandromusetta.com/geo/tiles/tingua/data/20230714/EstacaodaCulturaTingua.mp4' />
+            </Box>
+          </Box>
+        </Fade>
+      </Modal>
+    </div>
+  );
+}
+
 
 export function RoleIguacuano() {
   const [open, setOpen] = React.useState(false);

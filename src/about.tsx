@@ -47,7 +47,7 @@ export default function About() {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <IconButton onClick={handleClose} className="closebutton">
+            <IconButton onClick={handleClose} className="closebutton" style={{ fontWeight: "500 !important", fontSize: "1.2em !important" }}>
               <Close />
             </IconButton>
             <Typography id="modal-modal-title" variant="h6" component="h2">
@@ -64,11 +64,14 @@ export default function About() {
               -
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Podem explorar o mapa para encontrar quais dados foram coletados desde 2019 até hoje, começando pelos dados de monitoramento ambiental até aqueles sobre a agricultura orgânica no vale. Podem acessar a seção de narrações para descobrir mais sobre suas comunidades. Experimente!  
+              Podem explorar o mapa para encontrar quais dados foram coletados desde 2019 até hoje, começando pelos dados de monitoramento ambiental até aqueles sobre a agricultura orgânica no vale. Podem acessar a seção de narrações para descobrir mais sobre suas comunidades.<br />Escolha entre o mapa e as narrações, experimente!
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-             <Stories />
-            </Typography>
+
+            <div style={{ display: "flex", padding: "10px", marginTop:"10px", transform:"translate(-4%, 0%)" }}>
+              <Button onClick={handleClose} style={{ fontSize: "1em !important", padding: "4px", transform:"translate(-10%, 0%)" }}>Mapa</Button>
+              <Stories />
+            </div>
+
           </Box>
         </Fade>
       </Modal>
